@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">if (typeof MYPROJ === 'undefined') {
+    var MYPROJ = {};
+}
+
+<span id='MYPROJ-Presenter'>/**
+</span> * A conference presenter
+ *
+ * {@img ../../images/douglas_crockford_2.png}
+ *
+ * @class
+ * @extends MYPROJ.Person
+ * @type {*}
+ */
+MYPROJ.Presenter = (function () {
+    &quot;use strict&quot;;
+    var constructor,
+<span id='MYPROJ-Presenter-property-_gender'>        /**
+</span>         * @private
+         * @property {String}
+         */
+        _gender;
+
+<span id='MYPROJ-Presenter-method-constructor'>    /**
+</span>     * Create a new Presenter
+     *
+     * @param {Object} options
+     * @return {MYPROJ.Presenter}
+     * @constructor
+     */
+    constructor = function (options) {
+        _gender = (options &amp;&amp; options.gender) || 'LIZZARD';
+        return this;
+    };
+    constructor.prototype = Object.create(new MYPROJ.Person(), {
+<span id='MYPROJ-Presenter-method-getGender'>        /**
+</span>         * Get the gender of a presenter, returns 'M', 'F' or 'LIZZARD'
+         *
+         * @return {String}
+         */
+        getGender: {
+            value: function () {
+                return _gender;
+            }
+        }
+    });
+    return constructor;
+}());</pre>
+</body>
+</html>

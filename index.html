@@ -1,0 +1,56 @@
+<script src="js/global-static/myproj.js" />
+<script src="js/global-static/myproj.sub.js" />
+<script>
+    MYPROJ.doHelloWorld();
+</script>
+
+<script src="js/prototypal/Person.js" />
+<script src="js/prototypal/Presenter.js" />
+<script src="js/prototypal/Schedule.js" />
+<script src="js/prototypal/Talk.js" />
+<script src="js/prototypal/Talks.js" />
+<script src="js/prototypal/Track.js" />
+<script>
+(function() {
+    "use strict";
+    var presenters = {
+        boy    : new MYPROJ.Presenter({ firstName: 'Boy', lastName: 'Baukema', twitter: 'relaxnow', gitHub: 'relaxnow'}),
+        douglas: new MYPROJ.Presenter({ firstName: 'Douglas', lastName: 'Crockford'})
+    };
+
+    var keynotes = [
+        new MYPROJ.Presentation({
+            start: Date.parse('2012-06-7T09:00:00'),
+            end  : Date.parse('2012-06-7T09:45:00'),
+            title: 'Programming Style And Your Brain',
+            presenter: presenters.douglas
+        })
+    ];
+
+    var schedule = new MYPROJ.Schedule([
+        new MYPROJ.Track({
+            start: Date.parse('2012-06-7T09:00:00'),
+            end:   Date.parse('2012-06-7T17:00:00'),
+            presentations: [
+                keynotes[0],
+                new MYPROJ.Presentation({
+                    start: Date.parse('2012-06-7T10:00:00'),
+                    end  : Date.parse('2012-06-7T10:45:00'),
+                    title: "Let's build a parser!",
+                    description: 'In this presentation you will learn to build a parser. ' +
+                                 'We will use php-peg and recursive descent to build LL(1) parsers',
+                    presenter: presenters.boy
+                })
+        ]}),
+        new Track({
+            presentations: [
+                keynotes[0],
+                new MYPROJ.Presentation({
+
+                })
+            ]
+        })
+    ]);
+    schedule.renderTo('#schedule');
+})();
+</script>

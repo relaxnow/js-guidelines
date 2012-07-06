@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='MYPROJ'>/**
+</span> * Global namespace for all My Project functionality
+ *
+ * @class
+ * @type {*}
+ */
+var MYPROJ = (function () {
+    &quot;use strict&quot;;
+
+<span id='MYPROJ-method-_getGreeting'>    /**
+</span>     * Get the greeting to use
+     * @return {String}
+     * @private
+     */
+    function _getGreeting() {
+        return 'hello';
+    }
+
+<span id='MYPROJ-method-_getGreetingSubject'>    /**
+</span>     * Get the subject that needs to be greeted
+     * @return {String}
+     * @private
+     */
+    function _getGreetingSubject() {
+        return 'world';
+    }
+
+    return {
+<span id='MYPROJ-method-doHelloWorld'>        /**
+</span>         * Alert a friendly greeting to a visitor from out of this world
+         */
+        doHelloWorld: function () {
+            var greeting = _getGreeting() + ' ' + _getGreetingSubject();
+            alert(greeting);
+        }
+    };
+})();</pre>
+</body>
+</html>

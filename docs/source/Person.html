@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">if (typeof MYPROJ === 'undefined') {
+    var MYPROJ = {};
+}
+
+<span id='MYPROJ-Person'>/**
+</span> * Person model
+ *
+ * {@img ../../images/Stick_guy.jpg A person consists of a round head, two arms, two legs, a body and a neck, no more, no less}
+ *
+ * @class
+ * @type {MYPROJ.Person}
+ */
+MYPROJ.Person = (function () {
+    &quot;use strict&quot;;
+
+    var constructor,
+<span id='MYPROJ-Person-property-_firstName'>        /**
+</span>         * @property {String}
+         * @private
+         */
+        _firstName,
+
+<span id='MYPROJ-Person-property-_lastName'>        /**
+</span>         * @property {String}
+         * @private
+         */
+        _lastName,
+
+<span id='MYPROJ-Person-property-_gender'>        /**
+</span>         * @property {String}
+         * @private
+         */
+        _gender,
+
+<span id='MYPROJ-Person-property-_notifiers'>        /**
+</span>         * @property {Array}
+         * @private
+         */
+        _notifiers = [];
+
+<span id='MYPROJ-Person-method-constructor'>    /**
+</span>     * Create a new Person object
+     *
+     * @param {Object=} properties
+     * @constructor
+     */
+    constructor = function (properties) {
+        _firstName = properties &amp;&amp; properties.firstName;
+        _lastName  = properties &amp;&amp; properties.lastName;
+        _gender    = properties &amp;&amp; properties.gender;
+    };
+    constructor.prototype = {
+<span id='MYPROJ-Person-method-getFirstName'>        /**
+</span>         * Get the persons first name
+         *
+         * @return {String} First name
+         */
+        getFirstName: function () {
+            return _firstName;
+        },
+
+<span id='MYPROJ-Person-method-setFirstName'>        /**
+</span>         * Set a firstname
+         *
+         * @param {String} newFirstName
+         * @return {MYPROJ.Person}
+         */
+        setFirstName: function (newFirstName) {
+            _firstName = newFirstName;
+            return _callNotifiers(this);
+        },
+
+<span id='MYPROJ-Person-method-getLastName'>        /**
+</span>         * Get the persons last name
+         *
+         * @return {String} Surname
+         */
+        getLastName: function () {
+            return _lastName;
+        },
+
+<span id='MYPROJ-Person-method-getGender'>        /**
+</span>         * Get the persons gender (either 'M' or 'F')
+         *
+         * @return (String) Gender indicator
+         */
+        getGender: function () {
+            return _gender;
+        },
+
+<span id='MYPROJ-Person-method-notify'>        /**
+</span>         * Get notified when a person object changes
+         *
+         * @param {function(MYPROJ.Person): MYPROJ.Person} Callback when this person has been modified
+         */
+        notify: function (fn) {
+            if (typeof fn !== 'function') {
+                throw new TypeError('Notifier is not a function!');
+            }
+
+            _notifiers.push(fn);
+            return this;
+        }
+    };
+
+<span id='MYPROJ-Person-method-_callNotifiers'>    /**
+</span>     * Call all the notifiers and give them the Person object to inspect and modify.
+     *
+     * Note that this offers no protection against recursive issues (notifier that modifies,
+     * thus triggering notifiers, which modifies the object, thus triggering the notifiers, ad nauseam).
+     *
+     * @param {MYPROJ.Person} person
+     * @return {MYPROJ.Person}
+     * @private
+     */
+    function _callNotifiers(person) {
+        var i = 0;
+        while (i &lt; _notifiers.length) {
+            person = _notifiers[i](person);
+            i += 1;
+        }
+        return person;
+    }
+
+    return constructor;
+}());</pre>
+</body>
+</html>
