@@ -15,23 +15,40 @@ MYPROJ.Presenter = (function () {
     "use strict";
     var constructor,
         /**
-         * @private
          * @property {String}
+         * @private
+         */
+        _firstName,
+
+        /**
+         * @property {String}
+         * @private
+         */
+        _lastName,
+
+        /**
+         * @property {String}
+         * @private
          */
         _gender;
 
     /**
      * Create a new Presenter
      *
-     * @param {Object} options
+     * @param {Object=} properties
+     * @param {String=} properties.firstName
+     * @param {String=} properties.lastName
+     * @param {String=} properties.gender
      * @return {MYPROJ.Presenter}
      * @constructor
      */
-    constructor = function (options) {
+    constructor = function (properties) {
+        _firstName = properties && properties.firstName;
+        _lastName  = properties && properties.lastName;
         _gender = (options && options.gender) || 'LIZZARD';
         return this;
     };
-    constructor.prototype = Object.create(new MYPROJ.Person(), {
+    constructor.prototype = Object.create(MYPROJ.Person.prototype, {
         /**
          * Get the gender of a presenter, returns 'M', 'F' or 'LIZZARD'
          *

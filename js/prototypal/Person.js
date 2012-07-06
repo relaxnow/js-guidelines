@@ -42,12 +42,17 @@ MYPROJ.Person = (function () {
      * Create a new Person object
      *
      * @param {Object=} properties
+     * @param {String=} properties.firstName
+     * @param {String=} properties.lastName
+     * @param {String=} properties.gender
+     * @return MYPROJ.Person
      * @constructor
      */
     constructor = function (properties) {
         _firstName = properties && properties.firstName;
         _lastName  = properties && properties.lastName;
         _gender    = properties && properties.gender;
+        return this;
     };
     constructor.prototype = {
         /**
