@@ -19,11 +19,24 @@
     var MYPROJ = {};
 }
 
-MYPROJ.SUB = (function ($) {
+<span id='MYPROJ-DOMSTUFF'>/**
+</span> * This sub namespace of the MYPROJ namespace contains DOM stuff.
+ *
+ * @class
+ * @type {MYPROJ.SUB}
+ */
+MYPROJ.DOMSTUFF = (function ($) {
     &quot;use strict&quot;;
 
     return {
-
+<span id='MYPROJ-DOMSTUFF-method-doStuffWithJQuery'>        /**
+</span>         * Do stuff with jQuery, rebind $ to jQuery for compatibility
+         */
+        doStuffWithJQuery: function () {
+            $('form').hide('slow', function () {
+                $('form').show();
+            });
+        }
     };
 }(jQuery));</pre>
 </body>
