@@ -19,6 +19,7 @@ MYPROJ.Schedule = (function () {
     constructor.prototype = {
         /**
          * Render the schedule to all elements that match the given selector
+         * @param {String} selector CSS selector for elements to render the schedule to
          */
         renderTo: function (selector) {
 
