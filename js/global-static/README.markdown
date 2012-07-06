@@ -21,7 +21,7 @@ var NS = {
     doMoreStuff: function () {
 
     }
-}
+};
 ```
 
 Wrap in module function to add private variables:
@@ -37,7 +37,7 @@ Wrap in module function to add private variables:
         doMoreStuff: function () {
             return privateVarViaClosure;
         }
-    }
+    };
 }());
 ```
 

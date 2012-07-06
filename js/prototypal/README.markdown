@@ -34,9 +34,9 @@ new Greeter();
 Add the export pattern as we are exporting 1 thing:
 ```js
 var Greeter = (function(){
-    _greeting = 'Hello'
+    var _greeting = 'Hello'
 
-    constructor = function () {
+    var constructor = function () {
         alert(_greeting + ' ' + this.subject + '!');
     };
     constructor.prototype = {
