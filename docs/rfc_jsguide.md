@@ -5,7 +5,7 @@ Versions
 ========
 Version 0.1
 
-The Authoritive version can be found at: https://github.com/relaxnow/js-guidelines/edit/master/docs/rfc_jsguide.md .
+The Authoritative version can be found at: https://github.com/relaxnow/js-guidelines/edit/master/docs/rfc_jsguide.md .
 
 
 Authors
@@ -119,7 +119,7 @@ var tekno = function (
 ### MUST NOT rely on Automatic Semicolon Insertion
 ### MUST declare variables in the same or higher block structure
 ### MUST use comma last JSON
-### SHOULD NOT use multiline strings
+### SHOULD NOT use multi-line strings
 ### MUST NOT use escape function
 ### SHOULD use the dot notation where possible
 ### SHOULD use newlines to group logically related lines of code (but view it as a smell that a function might be better)
@@ -149,7 +149,7 @@ var tekno = function (
 ### SHOULD place external JavaScript in vendor/
 ### Files containing JQuery plugins MUST start with jquery.plugin.
 ### JavaScript programs SHOULD be stored in and delivered as .js files.
-### File names MUST be all lowercase wtih - as a word separator
+### File names MUST be all lowercase with - as a word separator
 
 
 6. Libraries
