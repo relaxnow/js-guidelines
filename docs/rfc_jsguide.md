@@ -1,5 +1,13 @@
 This document represents the official policy on writing JavaScript code at Ibuildings.
 
+Version 0.1
+The Authoritive version can be found at: https://github.com/relaxnow/js-guidelines/edit/master/docs/rfc_jsguide.md .
+
+Authors:
+* Boy Baukema <boy@ibuildings.nl>
+
+# Introduction
+
 These coding guidelines have been composed with the following in mind:
 * [Zend Framework Coding Guidelines for PHP](http://framework.zend.com/manual/en/coding-standard.html)
 * [PHP Standards Recommendation 2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
