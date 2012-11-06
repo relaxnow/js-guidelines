@@ -45,7 +45,7 @@ MYPROJ.Presenter = (function () {
     constructor = function (properties) {
         _firstName = properties && properties.firstName;
         _lastName  = properties && properties.lastName;
-        _gender = (options && options.gender) || 'LIZZARD';
+        _gender    = (properties && properties.gender) || 'LIZZARD';
         return this;
     };
     constructor.prototype = Object.create(MYPROJ.Person.prototype, {
