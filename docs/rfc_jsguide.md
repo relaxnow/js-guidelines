@@ -35,6 +35,7 @@ Furthermore tools may imply the following mapping:
 * ERROR = MUST, MUST NOT, REQUIRED
 * WARNING = SHALL, SHALL NOT, SHOULD, SHOULD NOT
 * NOTICE = RECOMMENDED, MAY, OPTIONAL
+
 See also: [RFC 5424](http://tools.ietf.org/html/rfc5424#page-11)
 
 
