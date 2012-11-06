@@ -6,6 +6,10 @@ The Authoritive version can be found at: https://github.com/relaxnow/js-guidelin
 Authors:
 * Boy Baukema <boy@ibuildings.nl>
 
+# Status of this document
+This document is in DRAFT and UNPUBLISHED.
+
+
 # Introduction
 
 These coding guidelines have been composed with the following in mind:
@@ -32,7 +36,15 @@ Furthermore tools may imply the following mapping:
 * NOTICE = RECOMMENDED, MAY, OPTIONAL
 See also: [RFC 5424](http://tools.ietf.org/html/rfc5424#page-11)
 
-Syntax
+
+# Usage
+
+The intended usage of this document is twofold:
+1. Introduction / refresher for (new) Ibuildings developers on JavaScript development practices
+2. Authoritative reference for code reviews
+
+
+1. Syntax
 ======
 
 ### Indentation MUST consist of 4 spaces
@@ -61,7 +73,7 @@ var tekno = function (
 }
 ```
 
-Language usage
+2. Language usage
 ==============
 ### Use descriptive names for variables and functions
 ### Keep functions short (preferably < 15 lines)
@@ -101,38 +113,38 @@ Language usage
 ### Use newlines to group logically related lines of code (but view it as a smell that a function might be better)
 
 
-ECMAScript 5
+3. ECMAScript 5
 ============
 ### SHOULD use Strict mode
 ### SHOULD NOT use global Strict mode
 ### SHOULD NOT use ES5 only features
 
 
-Comments
+4. Comments
 ========
-### Comments must be removed or updated when the code they apply to get's modified
+### Comments SHOULD be removed or updated when the code they apply to gets modified
 ### MAY use humor in comments.
 ### MUST NOT use curse words or express frustrations
-### Don't comment out code, remove it and keep it in source control
+### Source control SHOULD NOT contain commented out code
 ### Low level descriptions of what code does is bad, high level descriptions are okay, why code does what it does is great.
+### Document using [JSDoc-Toolkit](http://code.google.com/p/jsdoc-toolkit/) or [JSDuck](https://github.com/senchalabs/jsduck) compatible tags
 
 
-Files
+5. Files
 =====
-### Place external JavaScript in vendor/
-### Files containing JQuery plugins must start with jquery.plugin.
-### JavaScript programs should be stored in and delivered as .js files.
+### SHOULD place external JavaScript in vendor/
+### Files containing JQuery plugins MUST start with jquery.plugin.
+### JavaScript programs SHOULD be stored in and delivered as .js files.
 ### File names MUST be all lowercase wtih - as a word separator
 
 
-Libraries
+6. Libraries
 =========
-### Prefer a CDN for loading in JavaScript, but have a fallback
-### Include ECMAScript 5 polyfill
+### MAY prefer a [CDN](http://cdnjs.com) for loading well known libraries in JavaScript, but SHOULD have a local fallback
+### MAY include ECMAScript 5 polyfill
 
 
-Builds
+7. Builds
 ======
-### Document using [JSDoc-Toolkit](http://code.google.com/p/jsdoc-toolkit/) or [JSDuck](https://github.com/senchalabs/jsduck) compatible tags
+### Documentation MAY be generated using JSDuck
 ### Minify JavaScript for production
-
