@@ -1,6 +1,7 @@
 This document represents the official policy on writing JavaScript code at Ibuildings.
 
 Version 0.1
+
 The Authoritive version can be found at: https://github.com/relaxnow/js-guidelines/edit/master/docs/rfc_jsguide.md .
 
 Authors:
@@ -75,18 +76,18 @@ var tekno = function (
 
 2. Language usage
 ==============
-### Use descriptive names for variables and functions
-### Keep functions short (preferably < 15 lines)
-### Don't nest code more than 5 levels
-### Production JavaScript may not refer to the 'console' or 'debugger' object.
+### SHOULD Use descriptive names for variables and functions
+### SHOULD Keep functions short (preferably < 15 lines)
+### SHOULD NOT nest code more than 5 levels
+### Production JavaScript SHOULD NOT refer to the 'console' or 'debugger' object.
 ### MUST namespace all variables and functions (MUST NOT pollute the global namespace)
 ### MUST NOT use eval
 ### MUST NOT use with
 ### MUST NOT use void
 ### MUST NOT use of single letter variables is forbidden.
-### Avoid use of window
-### Prefer single quotes over double quotes
-### Use lowerCamelCasing
+### MAY NOT refer explicitly to the window object
+### SHOULD prefer single quotes over double quotes
+### SHOULD Use lowerCamelCasing
 ### Private methods / properties SHOULD start with _
 ### MUST use curly braces around blocks in loops and conditionals.
 ### MUST declare all variables with 'var'
@@ -110,7 +111,7 @@ var tekno = function (
 ### SHOULD NOT use multiline strings
 ### MUST NOT use escape function
 ### SHOULD use the dot notation where possible
-### Use newlines to group logically related lines of code (but view it as a smell that a function might be better)
+### SHOULD use newlines to group logically related lines of code (but view it as a smell that a function might be better)
 
 
 3. ECMAScript 5
@@ -122,12 +123,14 @@ var tekno = function (
 
 4. Comments
 ========
+### Document SHOULD use either [JSDoc-Toolkit](http://code.google.com/p/jsdoc-toolkit/) or [JSDuck](https://github.com/senchalabs/jsduck) compatible tags
 ### Comments SHOULD be removed or updated when the code they apply to gets modified
+### Source control SHOULD NOT contain commented out code
+### Comments SHOULD NOT descriptions of what code does at a low level
+### Comments MAY describe what code does at a high level
+### Comments are RECOMMENDED to describe why it does what it does
 ### MAY use humor in comments.
 ### MUST NOT use curse words or express frustrations
-### Source control SHOULD NOT contain commented out code
-### Low level descriptions of what code does is bad, high level descriptions are okay, why code does what it does is great.
-### Document using [JSDoc-Toolkit](http://code.google.com/p/jsdoc-toolkit/) or [JSDuck](https://github.com/senchalabs/jsduck) compatible tags
 
 
 5. Files
