@@ -51,6 +51,7 @@ Usage
 =====
 
 The intended usage of this document is twofold:
+
 1. Introduction / refresher for (new) Ibuildings developers on JavaScript development practices
 2. Authoritative reference for code reviews
 
