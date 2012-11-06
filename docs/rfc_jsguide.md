@@ -1,17 +1,25 @@
 This document represents the official policy on writing JavaScript code at Ibuildings.
 
+
+Versions
+========
 Version 0.1
 
 The Authoritive version can be found at: https://github.com/relaxnow/js-guidelines/edit/master/docs/rfc_jsguide.md .
 
-Authors:
+
+Authors
+=======
 * Boy Baukema <boy@ibuildings.nl>
 
-# Status of this document
+
+Status of this document
+=======================
 This document is in DRAFT and UNPUBLISHED.
 
 
-# Introduction
+Introduction
+============
 
 These coding guidelines have been composed with the following in mind:
 * [Zend Framework Coding Guidelines for PHP](http://framework.zend.com/manual/en/coding-standard.html)
@@ -39,7 +47,8 @@ Furthermore tools may imply the following mapping:
 See also: [RFC 5424](http://tools.ietf.org/html/rfc5424#page-11)
 
 
-# Usage
+Usage
+=====
 
 The intended usage of this document is twofold:
 1. Introduction / refresher for (new) Ibuildings developers on JavaScript development practices
@@ -47,7 +56,7 @@ The intended usage of this document is twofold:
 
 
 1. Syntax
-======
+=========
 
 ### Indentation MUST consist of 4 spaces
 ### Tabs MUST NOT be used
