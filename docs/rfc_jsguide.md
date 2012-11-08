@@ -95,7 +95,7 @@ var tekno = function (
 ### MUST NOT use eval
 ### MUST NOT use with
 ### MUST NOT use void
-### MUST NOT use of single letter variables is forbidden.
+### SHOULD NOT use single letter variables
 ### MAY NOT refer explicitly to the window object
 ### SHOULD prefer single quotes over double quotes
 ### SHOULD Use lowerCamelCasing
@@ -108,7 +108,7 @@ var tekno = function (
 ### SHOULD NOT use bitwise operators
 ### SHOULD protect for...in loops with hasOwnProperty
 ### MUST wrap immediate function execution in parenthesis
-### Namespace objects MUST be in ALL_CAPS_WITH_CAMEL_CASING
+### Namespace objects MUST be in ALL_CAPS_WITH_SNAKE_CASING
 ### MUST NOT define functions in conditionals
 ### MUST NOT use Array as a associative array (use Object instead)
 ### MUST NOT use IE Conditional Comments
